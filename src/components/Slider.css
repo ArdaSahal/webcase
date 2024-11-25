@@ -1,0 +1,84 @@
+.slider-buttons {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.btn-watch {
+  color: black;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+.play-icon {
+  color: black !important;
+}
+
+.btn-check {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-info {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding-left: min(10vw, 200px);
+  padding-right: min(10vw, 200px);
+}
+
+.slider-div {
+  display: flex;
+  gap: 50px;
+}
+
+.slider-image {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slider-div button {
+  height: 200px;
+}
+.slider-image.active {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .slider-div {
+    gap: 15px;
+  }
+  .slider-div button {
+    height: 100px;
+  }
+}
+
+.icon path {
+  color: black;
+}
+
+.icon-inverse path {
+  color: white;
+}

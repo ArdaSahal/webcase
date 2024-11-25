@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router,Routes,Route, useNavigate } from 'react-router-dom';
+import Login from './pages/login/Login'
+import { useState } from 'react';
+import Profiles from './pages/profiles/Profiles';
+import {Navigate} from "react-router-dom"
+import Homepage from "./pages/homepage/Homepage"
 
 function App() {
+
+  const [token,setToken] = useState(null)
+
+  const onLogin = (token) => {
+    setToken(token)
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={token ? <Profiles token={token}/> : <Login onLogin={onLogin}/>}/>
+        <Route path="/homepage" element={<Homepage/>} />
+      </Routes>
+    </Router>
   );
 }
 

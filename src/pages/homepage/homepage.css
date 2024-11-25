@@ -1,0 +1,42 @@
+.homepage {
+  /* padding-left: min(10vw, 200px);
+  padding-right: min(10vw, 200px); */
+  padding-top: 50px;
+  position: relative;
+}
+
+.bg-image {
+  z-index: -99;
+  top: 0;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.main-screen {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category-screen {
+  background-color: rgb(7, 5, 23);
+  height: 100vh;
+  width: 100vw;
+  top: 50px;
+  position: relative;
+}
+
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background-image: linear-gradient(transparent, rgb(7, 5, 23));
+}
